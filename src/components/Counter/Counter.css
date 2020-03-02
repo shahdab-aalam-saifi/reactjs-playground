@@ -1,0 +1,12 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.btn, .display {
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  font-variant: small-caps;
+  font-size: medium;
+}

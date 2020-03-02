@@ -1,0 +1,15 @@
+form {
+  border: thin solid red;
+  padding: 2rem;
+  margin: 2rem;
+  display: flex;
+}
+
+.form-title {
+  position: relative;
+  top: -48px;
+  background: white;
+  padding: 7px;
+  width: 70px;
+  color: red;
+}
