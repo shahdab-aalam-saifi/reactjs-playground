@@ -1,11 +1,13 @@
-import './Counter.css';
-import React, { useState } from 'react';
+import "./Counter.css";
+import React, { useState } from "react";
 
 // Button Component
 function Button(props) {
   return (
     <div>
-      <button className="btn" onClick={props.action}>{props.message}</button>
+      <button className="btn" onClick={props.action}>
+        {props.message}
+      </button>
       {/* render child nodes */}
       {props.children}
     </div>
@@ -32,4 +34,4 @@ function Counter() {
   );
 }
 
-  export default Counter;
+export default Counter;

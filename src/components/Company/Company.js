@@ -14,7 +14,7 @@ function TextInput(props) {
 }
 
 // Company Component
-export default class Company extends React.Component {
+class Company extends React.Component {
   render() {
     return (
       <form>
@@ -25,3 +25,5 @@ export default class Company extends React.Component {
     );
   }
 }
+
+export default Company;
