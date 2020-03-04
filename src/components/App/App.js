@@ -15,7 +15,6 @@ import {
   PATH_SEARCH
 } from "../../constants";
 
-// App Component
 class App extends Component {
   _isMounted = false;
 

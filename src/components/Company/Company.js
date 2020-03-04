@@ -1,29 +1,24 @@
-import './Company.css';
-import React from 'react';
+import "./Company.css";
+import React from "react";
 
-function Button(props) {
-  return <button className="btn" onClick={props.action}>{props.title}</button>;
-}
+const Button = props => (
+  <button className="btn" onClick={props.action}>
+    {props.title}
+  </button>
+);
 
-function Text(props) {
-  return <span className="form-title">{props.title}</span>;
-}
+const Text = props => <span className="form-title">{props.title}</span>;
 
-function TextInput(props) {
-  return <input type="text" placeholder={props.placeholder} required />;
-}
+const TextInput = props => (
+  <input type="text" placeholder={props.placeholder} required />
+);
 
-// Company Component
-class Company extends React.Component {
-  render() {
-    return (
-      <form>
-        <Text title="<Form />" />
-        <TextInput placeholder="Company Name" />
-        <Button title="Go!" />
-      </form>
-    );
-  }
-}
+const Company = () => (
+  <form>
+    <Text title="<Form />" />
+    <TextInput placeholder="Company Name" />
+    <Button title="Go!" />
+  </form>
+);
 
 export default Company;
