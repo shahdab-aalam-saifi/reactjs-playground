@@ -7,8 +7,7 @@ class SearchableList extends React.Component {
     super(props);
 
     this.state = {
-      query: "",
-      archivedItems: []
+      query: ""
     };
 
     this.onChange = this.onChange.bind(this);
@@ -25,12 +24,14 @@ class SearchableList extends React.Component {
   render() {
     const { list } = this.props;
     const { query } = this.state;
+    const filteredList = list.filter(byQuery(query));
+
     return (
       <div>
         <Search query={query} onChange={this.onChange}>
           Search List:
         </Search>
-        <List list={(list || []).filter(byQuery(query))} />
+        <List list={filteredList} />
       </div>
     );
   }
