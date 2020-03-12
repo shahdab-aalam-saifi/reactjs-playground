@@ -5,6 +5,7 @@ import * as serviceWorker from "./serviceWorker";
 import App from "./components/App/App";
 import { ReactContext, ThemeProvider } from "./components/ReactContext";
 import SearchableList from "./components/SearchableList";
+import {Redux} from "./components/TodoRedux";
 
 // ReactDOM.render(<App />, document.getElementById("root"));
 
@@ -31,6 +32,7 @@ const coloredTheme = "green";
 
 ReactDOM.render(
   <ThemeProvider coloredTheme={coloredTheme}>
+    {Redux()}
     <ReactContext />
   </ThemeProvider>,
   document.getElementById("root")
