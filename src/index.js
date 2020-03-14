@@ -2,12 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
-import App from "./components/App/App";
+import HackerNews from "./components/HackerNews/HackerNews";
 import { ReactContext, ThemeProvider } from "./components/ReactContext";
 import SearchableList from "./components/SearchableList";
-import {Redux} from "./components/TodoRedux";
+import { PlainRedux } from "./components/PlainRedux";
 
-// ReactDOM.render(<App />, document.getElementById("root"));
+///////////////////////////////////////////////////////////////////////////////
+
+// ReactDOM.render(<HackerNews />, document.getElementById("root"));
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -20,23 +22,28 @@ import {Redux} from "./components/TodoRedux";
 
 ///////////////////////////////////////////////////////////////////////////////
 
-const list = [
-  { id: 1, name: "ABC" },
-  { id: 2, name: "DEF" },
-  { id: 3, name: "HIJ" },
-  { id: 4, name: "KLM" },
-  { id: 5, name: "NOP" }
-];
+// const list = [
+//   { id: 1, name: "ABC" },
+//   { id: 2, name: "DEF" },
+//   { id: 3, name: "HIJ" },
+//   { id: 4, name: "KLM" },
+//   { id: 5, name: "NOP" }
+// ];
 
-const coloredTheme = "green";
+// const coloredTheme = "green";
 
-ReactDOM.render(
-  <ThemeProvider coloredTheme={coloredTheme}>
-    {Redux()}
-    <ReactContext />
-  </ThemeProvider>,
-  document.getElementById("root")
-);
+// ReactDOM.render(
+//   <ThemeProvider coloredTheme={coloredTheme}>
+//     <ReactContext />
+//   </ThemeProvider>,
+//   document.getElementById("root")
+// );
+
+///////////////////////////////////////////////////////////////////////////////
+
+// PlainRedux();
+
+///////////////////////////////////////////////////////////////////////////////
 
 // Hot Module Replacement
 if (module.hot) {

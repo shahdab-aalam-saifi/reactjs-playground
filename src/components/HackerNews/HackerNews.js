@@ -1,4 +1,4 @@
-import "./App.css";
+import "./HackerNews.css";
 import React, { Component } from "react";
 import axios from "axios";
 
@@ -16,7 +16,7 @@ import {
   PATH_SEARCH
 } from "../../constants";
 
-class App extends Component {
+class HackerNews extends Component {
   _isMounted = false;
 
   constructor(props) {
@@ -158,4 +158,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default HackerNews;
