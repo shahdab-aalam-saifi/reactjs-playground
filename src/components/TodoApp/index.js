@@ -1,8 +1,16 @@
 import React from "react";
 import { ConnectedTodoList } from "./TodoList";
+import { ConnectedTodoCreate } from "./TodoCreate";
+import { ConnectedFilter } from "./Filter";
 
 const TodoApp = () => {
-  return <ConnectedTodoList />;
+  return (
+    <div>
+      <ConnectedFilter />
+      <ConnectedTodoCreate />
+      <ConnectedTodoList />
+    </div>
+  );
 };
 
 export default TodoApp;
