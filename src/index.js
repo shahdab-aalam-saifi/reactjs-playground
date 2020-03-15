@@ -2,10 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
-import HackerNews from "./components/HackerNews/HackerNews";
-import { ReactContext, ThemeProvider } from "./components/ReactContext";
-import SearchableList from "./components/SearchableList";
-import { PlainRedux } from "./components/PlainRedux";
+import TodoApp from "./components/TodoApp";
+import { store } from "./components/TodoApp/store";
+import { Provider } from "react-redux";
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -42,6 +41,15 @@ import { PlainRedux } from "./components/PlainRedux";
 ///////////////////////////////////////////////////////////////////////////////
 
 // PlainRedux();
+
+///////////////////////////////////////////////////////////////////////////////
+
+ReactDOM.render(
+  <Provider store={store}>
+    <TodoApp />
+  </Provider>,
+  document.getElementById("root")
+);
 
 ///////////////////////////////////////////////////////////////////////////////
 
