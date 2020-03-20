@@ -2,7 +2,7 @@ import React from "react";
 import { doSetFilter } from "../creator/filter";
 import { connect } from "react-redux";
 
-function Filter({ onSetFilter }) {
+const Filter = ({ onSetFilter }) => {
   return (
     <div>
       Show
@@ -17,12 +17,12 @@ function Filter({ onSetFilter }) {
       </button>
     </div>
   );
-}
+};
 
-function mapDispatchToPropsFilter(dispatch) {
+const mapDispatchToProps = dispatch => {
   return {
     onSetFilter: filterType => dispatch(doSetFilter(filterType))
   };
-}
+};
 
-export const ConnectedFilter = connect(null, mapDispatchToPropsFilter)(Filter);
+export const ConnectedFilter = connect(null, mapDispatchToProps)(Filter);

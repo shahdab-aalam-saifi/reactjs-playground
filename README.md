@@ -114,3 +114,25 @@ directions. The model layer depends on the view layer and the view layer depends
 layer. It’s a vice versa dependency that leads to performance issues in the update lifecycle.
 These three advantages show the benefits of using a unidirectional data flow over an bidirectional
 data flow. That’s why so many state management solutions thrive for the former one nowadays.
+
+## Redux Naming Conventions
+
+In Redux, you have a handful of different types of functions. You have action creators, selectors and
+reducers. It is always good to name them accordingly to their type. Other developers will have an
+easier time identifying the function type. Just following a naming convention for your functions,
+you can give yourself and others a valuable information about the function itself.
+
+- action creators: **do**Something
+- reducers: **apply**Something
+- selectors: **get**Something
+- sagas: **watch**Something, **handle**Something
+
+### Technical Folder Organization
+
+- app
+  - reducers
+  - actions creators
+  - selectors
+  - store
+  - constants
+  - components

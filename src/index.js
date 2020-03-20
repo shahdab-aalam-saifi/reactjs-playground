@@ -2,13 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
-import TodoApp from "./components/TodoApp";
-import { store } from "./components/TodoApp/store";
-import { Provider } from "react-redux";
+import HackerNews from "./components/HackerNews";
 
 ///////////////////////////////////////////////////////////////////////////////
 
-// ReactDOM.render(<HackerNews />, document.getElementById("root"));
+ReactDOM.render(<HackerNews />, document.getElementById("root"));
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -44,12 +42,12 @@ import { Provider } from "react-redux";
 
 ///////////////////////////////////////////////////////////////////////////////
 
-ReactDOM.render(
-  <Provider store={store}>
-    <TodoApp />
-  </Provider>,
-  document.getElementById("root")
-);
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <TodoApp />
+//   </Provider>,
+//   document.getElementById("root")
+// );
 
 ///////////////////////////////////////////////////////////////////////////////
 

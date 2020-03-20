@@ -38,15 +38,15 @@ class HackerNews extends Component {
     this.onDismiss = this.onDismiss.bind(this);
   }
 
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+
   componentDidMount() {
     this._isMounted = true;
     const { searchTerm } = this.state;
     this.setState({ searchKey: searchTerm });
     this.fetchSearchTopStories(searchTerm);
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
   }
 
   needsToSearchTopStories(searchTerm) {

@@ -42,11 +42,11 @@ class TodoCreate extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
   return {
     onAddTodo: name => dispatch(doAddTodo(uuid(), name))
   };
-}
+};
 
 export const ConnectedTodoCreate = connect(
   null,

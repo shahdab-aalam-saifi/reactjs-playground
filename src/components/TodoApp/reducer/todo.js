@@ -25,8 +25,6 @@ const initialTodoState = {
   ids: normalizedTodos.result
 };
 
-console.log(normalizedTodos);
-
 export const todoReducer = (state = initialTodoState, action) => {
   switch (action.type) {
     case TODO_ADD:
